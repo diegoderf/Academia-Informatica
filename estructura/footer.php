@@ -1,12 +1,8 @@
-<footer id="footer"> 
-		<div class="container">
-            <div>
-                mapa de sitio
-            </div>
-            
-            
+ <!-- Footer -->
+	<footer id="footer"> 
+		<div class="container"> 
 			<div class="text-center"> 
-				<p>Copyright &copy; 2014 - <a href="http://mostafiz.me/">Mostafiz</a> | All Rights Reserved</p> 
+				<p>Copyright &copy; 2016 <a target="_blank" href="http://www.upiicsa.ipn.mx/">Academias de Informática UPIICSA</a> | Todos los derechos reservados</p> 
 			</div> 
 		</div> 
 	</footer> <!--/#footer--> 

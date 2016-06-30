@@ -1,33 +1,20 @@
+<!-- AUTOR : Academias de informática UPIICSA 2016 -->
 <!DOCTYPE html>
-
 <html lang="es">
 
-    <!-- Head -->
-        <?php include 'estructura/head.php'; ?>
-    
-    <!-- Body -->
-        <body>
-            
-            <!-- Nav -->
-                <?php include 'estructura/nav.php'; ?>
-            <!--Home o Inicio -->
-                <?php include 'estructura/home.php'; ?>
-        <div class="container">
-            <!--contacto-->
-            <?php include 'estructura/conocenos.php';?>
-            <!--oferta-->
-            <?php include 'estructura/oferta.php';?>
-            <!--horarios-->
-            <?php include 'estructura/horarios.php';?>
-            <!--contacto-->
-            <?php include 'estructura/contacto.php';?>
-            
-            
-                
-            <!-- footer -->
-                <?php include 'estructura/footer.php'; ?>
-            <!-- Scripts -->
-                <?php include 'estructura/scripts.php'; ?>
-         </div>
-        </body>
+<?php include 'estructura/head.php'; ?>
+
+<body>
+    <?php include 'estructura/preloader.php'; ?>
+    <?php include 'estructura/menu.php'; ?>
+    <?php include 'estructura/slider.php'; ?>
+    <?php include 'estructura/conocenos.php'; ?>
+    <?php include 'estructura/oferta.php'; ?>
+    <?php include 'estructura/horarios.php'; ?>
+    <?php include 'estructura/estudiantes.php'; ?>
+    <?php include 'estructura/contacto.php'; ?>
+    <?php include 'estructura/login.php';?>
+    <?php include 'estructura/footer.php'; ?>
+    <?php include 'estructura/scripts.php'; ?>  	
+</body>
 </html>
