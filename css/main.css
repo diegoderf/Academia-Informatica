@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slider-btn {
-	background-color:#3BB23D;
+	background-color:#3BB23D; 
 	color: #FFF;
 	-webkit-box-shadow: inset 0 0 0 2px #3BB23D;
 	box-shadow: inset 0 0 0 2px #3BB23D;

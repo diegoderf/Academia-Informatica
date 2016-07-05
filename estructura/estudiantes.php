@@ -1,4 +1,20 @@
-  <!-- Sección Estudiante -->
+<?php     
+    include 'clases/conexion.php';
+    $consulta= "SELECT concepto_estudiantes, introduccion_estudiantes, descripcion_estudiantes FROM estudiantes";
+    $resultado=mysqli_query($link,$consulta);  
+    $i=0;
+    while($fila = mysqli_fetch_row($resultado)){        
+        $concepto[$i]=$fila[0];
+        $introduccion[$i]=$fila[1];  
+        $descripcion[$i]=$fila[2];        
+        $i++;
+    }
+    include 'clases/desconexion.php';
+?>
+
+
+
+<!-- Sección Estudiante -->
         <section id="blog"> 
 						<div class="container">
 							<div class="row text-center clearfix">
@@ -11,10 +27,10 @@
 								<div class="col-sm-4">
 									<div class="single-blog">
 										<img src="images/estudiantes/1.jpg" alt="" />
-										<h2>Titulación</h2>
+										<h2><?php echo $concepto[0]; ?></h2>
 										
 										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+											<p><?php echo $introduccion[0]; ?></p>
 										</div>
 										<a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-detail">Leer más</a>
 									</div>
@@ -24,8 +40,8 @@
 												<div class="modal-body">
 													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 													<img src="images/estudiantes/1.jpg" alt="" />
-													<h2>Titulación</h2>
-													<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+													<h2><?php echo $concepto[0]; ?></h2>
+													<p><?php echo $descripcion[0]; ?></p>
 												</div> 
 											</div>
 										</div>
@@ -34,10 +50,10 @@
 								<div class="col-sm-4">
 									<div class="single-blog">
 										<img src="images/estudiantes/2.jpg" alt="" />
-										<h2>Servicio Social</h2>
+										<h2><?php echo $concepto[1]; ?></h2>
 										
 										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+											<p><?php echo $introduccion[1]; ?></p>
 										</div>
 										<a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-two">Leer más</a>
 									</div>
@@ -47,8 +63,8 @@
 												<div class="modal-body">
 													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 													<img src="images/estudiantes/2.jpg" alt="" />
-													<h2>Servicio Social</h2>
-													<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+													<h2><?php echo $concepto[1]; ?></h2>
+													<p><?php echo $descripcion[1]; ?></p>
 												</div>
 											</div>
 										</div>
@@ -57,10 +73,10 @@
 								<div class="col-sm-4">
 									<div class="single-blog">
 										<img src="images/estudiantes/3.jpg" alt="" />
-										<h2>Tutorías</h2>
+										<h2><?php echo $concepto[2]; ?></h2>
 										
 										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+											<p><?php echo $introduccion[2]; ?></p>
 										</div>
 										<a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-three">Leer más</a>
 									</div>
@@ -70,8 +86,8 @@
 												<div class="modal-body">
 													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 													<img src="images/estudiantes/3.jpg" alt="" />
-													<h2>Tutorías</h2>
-													<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+													<h2><?php echo $concepto[2]; ?></h2>
+													<p><?php echo $descripcion[2]; ?></p>
 												</div> 
 											</div>
 										</div>
@@ -80,9 +96,9 @@
 								<div class="col-sm-4">
 									<div class="single-blog">
 										<img src="images/estudiantes/4.jpg" alt="" />
-										<h2>Prácticas Profesionales</h2>
+										<h2><?php echo $concepto[3]; ?></h2>
 										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+											<p><?php echo $introduccion[3]; ?></p>
 										</div>
 										<a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-four">Leer más</a></div>
 										<div class="modal fade" id="blog-four" tabindex="-1" role="dialog" aria-hidden="true">
@@ -91,8 +107,8 @@
 													<div class="modal-body">
 														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 														<img src="images/estudiantes/4.jpg" alt="" />
-														<h2>Prácticas Profesionales</h2>
-														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+														<h2><?php echo $concepto[3]; ?></h2>
+														<p><?php echo $descripcion[3]; ?></p>
 													</div> 
 												</div>
 											</div>
@@ -101,10 +117,10 @@
 									<div class="col-sm-4">
 										<div class="single-blog">
 											<img src="images/estudiantes/5.jpg" alt="" />
-											<h2>Inglés</h2>
+											<h2><?php echo $concepto[4]; ?></h2>
 											
 											<div class="blog-content">
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+												<p><?php echo $introduccion[4]; ?></p>
 											</div>
 											<a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-six">Leer más</a>
 										</div>
@@ -114,8 +130,8 @@
 													<div class="modal-body">
 														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 														<img src="images/estudiantes/5.jpg" alt="" />
-														<h2>Inglés</h2>
-														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+														<h2><?php echo $concepto[4]; ?></h2>
+														<p><?php echo $descripcion[4]; ?></p>
 													</div> 
 												</div>
 											</div>
@@ -125,9 +141,9 @@
 									<div class="col-sm-4">
 										<div class="single-blog">
 											<img src="images/estudiantes/6.jpg" alt="" />
-											<h2>Movilidad Académica</h2>
+											<h2><?php echo $concepto[5]; ?></h2>
 											<div class="blog-content">
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+												<p><?php echo $introduccion[5]; ?></p>
 											</div>
 											<a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-seven">Leer más</a>
 										</div>
@@ -137,8 +153,8 @@
 													<div class="modal-body">
 														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 														<img src="images/estudiantes/6.jpg" alt="" />
-														<h2>Movilidad Académica</h2>
-														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+														<h2><?php echo $concepto[5]; ?></h2>
+														<p><?php echo $descripcion[5]; ?></p>
 													</div> 
 												</div>
 											</div>

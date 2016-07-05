@@ -1,4 +1,18 @@
-  <!-- Sección contacto -->
+<?php     
+    include 'clases/conexion.php';
+    $consulta= "SELECT telefono_contacto,extension_contacto,academia FROM contacto";
+    $resultado=mysqli_query($link,$consulta);  
+    $i=0;
+    while($fila = mysqli_fetch_row($resultado)){        
+        $tel[$i]=$fila[0];
+        $ext[$i]=$fila[1];  
+        $aca[$i]=$fila[2];        
+        $i++;
+    }
+    include 'clases/desconexion.php';
+?>
+
+<!-- Sección contacto -->
 						<section id="contact">
 							<div class="container">
 								<div class="row text-center clearfix">
@@ -15,8 +29,8 @@
 									<div class="pattern"></div>
 									<div class="row text-center clearfix">
 										<div class="col-sm-6">
-											<div class="contact-address"><address><p><span>Academia</span>Informática</p><strong>Dirección Upiicsa<br>
-Av. Té #950 esquina Resina, Col. Granjas México, C.P. 08400,<br> Del. Iztacalco, Ciudad de México, México. </strong><br><small> Teléfono: 56242000 EXT. 70076</small></address>
+											<div class="contact-address"><address><p><span>Academia</span><?php echo $aca[0];?></p><strong>Dirección Upiicsa<br>
+Av. Té #950 esquina Resina, Col. Granjas México, C.P. 08400,<br> Del. Iztacalco, Ciudad de México, México. </strong><br><small> Teléfono:<?php echo $tel[0];?> EXT. <?php echo $ext[0];?></small></address>
 												<div class="social-icons">
 													<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
 												
@@ -26,7 +40,7 @@ Av. Té #950 esquina Resina, Col. Granjas México, C.P. 08400,<br> Del. Iztacalc
 										<div class="col-sm-6"> 
 											<div id="contact-form-section">
 												<div class="status alert alert-success" style="display: none"></div>
-												<form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+												<form id="contact-form" class="contact" name="contact-form" method="post" action="clases/send-mail.php">
 													<div class="form-group">
 														<input type="text" name="name" class="form-control name-field" required="required" placeholder="Nombre"></div>
 														<div class="form-group">

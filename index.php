@@ -1,4 +1,4 @@
-<!-- AUTOR : Academias de informática UPIICSA 2016 -->
+<!-- Programadores: Servicio Social Academias de informática UPIICSA 2016 -->
 <!DOCTYPE html>
 <html lang="es">
 

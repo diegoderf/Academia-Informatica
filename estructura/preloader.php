@@ -1,4 +1,4 @@
- <!-- Bolitas de inicio -->
+ <!-- Bolitas de inicio  -->
 	<div class="preloader">
 		<div class="preloder-wrap">
 			<div class="preloder-inner"> 

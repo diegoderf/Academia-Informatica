@@ -1,3 +1,17 @@
+<?php     
+    include 'clases/conexion.php';
+    $consulta= "SELECT titulo_slider, descripcion_slider, boton_slider FROM slider";
+    $resultado=mysqli_query($link,$consulta);  
+    $i=0;
+    while($fila = mysqli_fetch_row($resultado)){        
+        $titulo[$i]=$fila[0];
+        $descripcion[$i]=$fila[1];
+        $boton[$i]=$fila[2];  
+        $i++;
+    }
+    include 'clases/desconexion.php';
+?>
+
 <!-- SLIDER -->
 	<section id="home">
 		<div class="home-pattern"></div>
@@ -11,26 +25,26 @@
 				<div class="item active" style="background-image: url(images/slider/slide3.jpg)"> 
 					<div class="carousel-caption"> 
 						<div> 
-							<h2 class="heading animated bounceInDown">Revisa los horarios</h2> 
-							<p class="animated bounceInUp">Ciclo Escolar 2016-2017 A</p> 
-							<a class="btn btn-default slider-btn animated fadeIn" href="#horarios">Clic aquí!</a> 
+							<h2 class="heading animated bounceInDown"><?php echo $titulo[0]; ?></h2> 
+							<p class="animated bounceInUp"><?php echo $descripcion[0]; ?></p> 
+							<a class="btn btn-default slider-btn animated fadeIn" href="#horarios"><?php echo $boton[0]; ?></a> 
 						</div> 
 					</div> 
 				</div>
 				<div class="item" style="background-image: url(images/slider/slide2.jpg)"> 
 					<div class="carousel-caption"> <div> 
-						<h2 class="heading animated bounceInDown sombra">¿Te vas a inscribir?</h2> 
-						<p class="animated bounceInUp">Encuentra el plan de tu carrera</p> 
-                        <a class="btn btn-default slider-btn animated fadeIn" href="#">Clic Aquí!</a> 
+						<h2 class="heading animated bounceInDown sombra"><?php echo $titulo[1]; ?></h2> 
+						<p class="animated bounceInUp"><?php echo $descripcion[1]; ?></p> 
+                        <a class="btn btn-default slider-btn animated fadeIn" href="#"><?php echo $boton[1]; ?></a> 
 					</div> 
 				</div> 
 			</div> 
 			<div class="item" style="background-image: url(images/slider/slide1.jpg)"> 
 				<div class="carousel-caption"> 
 					<div> 
-						<h2 class="heading animated bounceInRight">Registro de profesores</h2> 
-						<p class="animated bounceInLeft">Del 1 al 7 de agosto del 2016</p> 
-						<a class="btn btn-default slider-btn animated bounceInUp" href="#">REGISTRO AQUÍ</a> 
+						<h2 class="heading animated bounceInRight"><?php echo $titulo[2]; ?></h2> 
+						<p class="animated bounceInLeft"><?php echo $descripcion[2]; ?></p> 
+						<a class="btn btn-default slider-btn animated bounceInUp" href="#"><?php echo $boton[2]; ?></a> 
 					</div> 
 				</div> 
 			</div>
