@@ -28,7 +28,7 @@
 						<div class="row item active">
 							<div class="col-sm-6 col-md-3">
 								<div class="single-member">
-									<img src="images/horarios/member1.jpg" alt="team member" />
+									<img class="horarios" src="images/horarios/member1.jpg" alt="team member" />
 									<h4><?php echo $tipoHorario[0]; ?></h4>
 									<h5><?php echo $periodo[0]; ?></h5>
                                     <p><?php echo $descripcion[0] ;?></p>

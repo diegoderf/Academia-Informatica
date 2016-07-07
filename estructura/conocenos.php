@@ -35,7 +35,7 @@
 					<div class="tab-content">
 						<div class="tab-pane fade in active" id="about">
 							<div class="media">
-								<img class="pull-left media-object" width="150px"  src="images/conocenos/mision.png" alt="Misión"> 
+								<img class="pull-left media-object" width="150px;" src="images/conocenos/mision.png" alt="Misión"> 
 								<div class="media-body">
 									<p><?php echo $textoConocenos[1]."<br>"; 
                                         if ($url[1]!=NULL){

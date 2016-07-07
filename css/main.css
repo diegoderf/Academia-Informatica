@@ -14,6 +14,10 @@ body {
 body  section{
 	padding: 75px 0;
 }
+.horarios{
+    width: 10px;
+    
+}
 
 a:hover {
 	outline: none;
@@ -650,11 +654,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-member {
-	height:430px;
+    width: 100%;
+	height:450px;
 	background-color:#43484E;
 	border: 1px solid #43484E;
 	color: #f6f6f6;
-	padding: 25px;
+	padding: 10px;
 	text-align:center;
 	overflow:hidden;
 }
